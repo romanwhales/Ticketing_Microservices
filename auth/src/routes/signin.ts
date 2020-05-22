@@ -1,9 +1,10 @@
 import express,{Request,Response} from 'express';
 import {body} from 'express-validator';
-import {validateRequest} from '../middlewares/validate-request';
+import {validateRequest,BadRequestError} from '@romanwhalestickets/common';
+// import {validateRequest} from '../../../common/src/middlewares/validate-request';
 // import {RequestValidationError} from '../errors/request-validation-error';
 import {User} from '../models/User';
-import {BadRequestError} from '../errors/bad-request-error';
+// import {BadRequestError} from '../../../common/src/errors/bad-request-error';
 import {Password} from '../services/password';
 import jwt from 'jsonwebtoken';
 

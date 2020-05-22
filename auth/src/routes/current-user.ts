@@ -1,6 +1,9 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
-import {currentUser} from '../middlewares/current-user';
+import {currentUser} from  '@romanwhalestickets/common';
+// import {currentUser} from '../../../common/src/middlewares/current-user'
+
+
 
 
 
@@ -25,6 +28,7 @@ router.get('/api/users/currentuser',currentUser,(req,res)=>{
     //         currentUser: null
     //     })
     // }
+    console.log('Current User is ',req.currentUser);
     res.send({currentUser: req.currentUser || null})
 })
 
